@@ -1,38 +1,231 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arvo', serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-image: url('./assets/login2.jpg');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: #F5F5F7;
+}
+
+.nav {
+  height: 4.3rem;
+  box-shadow: 0 2px 4px -1px rgb(0 0 0 / 30%);
+  background-color: #007bff;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f87171;
+  z-index: 5;
+}
+
+.innernav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100vw;
+  margin: 0 1%;
+}
+
+.leftnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logoname {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rightnav {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  list-style-type: none;
+  align-items: center;
+}
+
+.headername {
+  font-size: 23px;
+}
+
+.profilecontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 3px;
+}
+
+.consultancyProfile {
+  height: 35px;
+  width: 35px;
+  background-color: rgb(252, 193, 84);
+  border-radius: 50%;
+}
+
+.navfont {
+  font-size: 20px;
+}
+
+.active {
+  background-color: #2a8ffc;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  transition: ease-in 0.2s;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.sidebar {
+  position: fixed;
+  z-index: 9;
+  background: #007bff;
+  width: 18rem;
+  padding-right: 1rem;
+  height: 100%;
+  transition: all 400ms ease;
+}
+
+.expands {
+  left: 0;
+}
+
+.not-expands {
+  left: -35%;
+}
+
+.dashboard {
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 1rem;
+}
+
+.addnew {
+  padding-left: 90%;
+  padding-top: 1rem;
+}
+
+.stylebutton {
+  margin-left: 5px;
+  margin-top: 2.2px;
+  font-size: 16px;
+}
+
+.newregister{
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.application{
+  padding-top: 5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cardcontianer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1%;
+  margin-top: 1rem;
+}
+
+.classheader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px auto;
+  height: 50px;
+  background-color: #007bff;
+  border-radius: 5px 5px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+  .rightnav {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .not-expands {
+    left: -55%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .rightnav {
+    display: none;
+  }
+
+  .not-expands {
+    left: -81%;
+  }
+
+  .addnew {
+    padding-left: 80%;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .not-expands {
+    left: -105%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .not-expands {
+    left: -500%;
   }
 }
